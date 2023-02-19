@@ -7,3 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
 }
+
+ul,
+nav {
+  @include list-unstyled();
+}

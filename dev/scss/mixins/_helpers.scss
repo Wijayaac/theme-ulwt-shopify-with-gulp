@@ -28,11 +28,11 @@ $image-path: '{{ asset_url }}' !default;
 
 //scss-lint:disable all
 @mixin font-file($asset-font-name) {
-  src: url('{{ "#{$asset-font-name}.eot" | asset_url }}');
-  src: url('{{ "#{$asset-font-name}.eot" | asset_url }}?#iefix') format("embedded-opentype"),
-    url('{{ "#{$asset-font-name}.woff" | asset_url }}') format("woff"),
-    url('{{ "#{$asset-font-name}.ttf" | asset_url }}') format("truetype"),
-    url('{{ "#{$asset-font-name}.svg" | asset_url }}') format("svg");
+  // src: url('{{ "#{$asset-font-name}.woff" | asset_url }}');
+  src: url('{{ "#{$asset-font-name}.woff2" | asset_url }}') format("woff2"),
+    url('{{ "#{$asset-font-name}.woff" | asset_url }}') format("woff");
+    // url('{{ "#{$asset-font-name}.ttf" | asset_url }}') format("truetype"),
+    // url('{{ "#{$asset-font-name}.svg" | asset_url }}') format("svg");
 }
 //scss-lint:enable all
 

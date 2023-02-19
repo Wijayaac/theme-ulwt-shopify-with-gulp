@@ -1,27 +1,41 @@
 @mixin h1() {
   // styles
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 @mixin h2() {
   // styles
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 @mixin h3() {
   // styles
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 @mixin h4() {
   // styles
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
 }
 
 @mixin h5() {
   // styles
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 @mixin h6() {
   // styles
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 @mixin p() {
   // styles
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
 }
