@@ -29,7 +29,7 @@
       <ul class="header__menu-wrapper">
         {% for link in linklists['main-menu'].links -%}
           <li>
-            <a href="{{link.url}}" class="header__nav-item header__nav-item--primary">{{ link.title }}</a>
+            <a href="{{ link.url }}" class="header__nav-item header__nav-item--primary">{{ link.title }}</a>
           </li>
         {%- endfor %}
       </ul>
@@ -40,7 +40,7 @@
       </li>
       <li>
         <a href="#" class="header__nav-item header__nav-item--primary">
-          <span>
+          <span class="header__search-icon">
             <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
               <use href="#icon-search">
             </svg>

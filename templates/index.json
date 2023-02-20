@@ -1,4 +1,15 @@
 {
-  "sections": {},
-  "order": []
+  "name": "home-page",
+  "sections": {
+    "text-image": {
+      "type": "text-image",
+      "settings": {
+        "heading": "lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet",
+        "enable_scroll_instruction": true,
+        "image_height": "full"
+      }
+    }
+  },
+  "order": [ "text-image" ]
 }

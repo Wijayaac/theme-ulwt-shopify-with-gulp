@@ -17,26 +17,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 65px;
         transition: all 400ms, 400ms ease;
-        padding: 10px 20px;
-
-        // .scroll & {
-        //     padding: 24px 20px;
-        // }
+        padding: 24px 20px;
 
         @media (min-width: 992px) {
             justify-content: flex-start;
-            padding: 15px 30px;
-            height: 80px;
+            padding: 48px 30px;
         }
     }
 
     &__logo-wrapper {
-        h2 {
+        &>* {
             font-size: 18px;
-            color: $color-black; // change to white
+            color: $color-white; // change to white
             width: max-content;
+            margin-bottom: 0;
+            text-transform: uppercase;
 
             .scroll & {
                 color: $color-white;
@@ -142,9 +138,8 @@
         @media (min-width: 992px) {
             flex-direction: row;
             position: static;
-            height: 70px;
             transform: translateX(0);
-            padding: 1.25rem 0;
+            padding: 0;
             width: 100%;
             background-color: transparent;
 
@@ -158,17 +153,18 @@
         display: flex;
         align-items: center;
 
+        &>li {
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+
         .icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 20px;
-
-            &-cart {
-                width: 40px;
-                height: 40px;
-            }
+            width: 24px;
+            height: 24px;
         }
     }
 
@@ -191,7 +187,6 @@
         li {
             display: flex;
             align-items: center;
-            // margin: 25px 0;
             margin-right: 25px;
             margin-top: 25px;
             margin-bottom: 25px;
@@ -199,36 +194,44 @@
 
             @media (min-width: 992px) {
                 justify-content: flex-start;
-                margin-top: 15px;
-                margin-bottom: 15px;
+                margin-top: 0;
+                margin-right: 32px;
+                margin-bottom: 0;
             }
         }
-
-        // &:first-child>li:not(:last-child) {
-        //     @media (min-width: 992px) {
-        //         margin: 0 0 0 60px;
-        //     }
-        // }
-
-        // @media (min-width: 992px) {
-        //     &:first-child>li:last-child {
-        //         margin-left: 60px;
-        //     }
-        // }
     }
 
     &__nav {
         &-item {
-            color: $color-black; // change to white
-            text-transform: uppercase;
+            @include make-link($color-white); // change to white
             position: relative;
             z-index: 2;
-            // font-size: 17px;
-            // letter-spacing: 0.075em;
-            // font-weight: 500;
+            font-size: 16px;
+
 
             .scroll & {
-                color: $color-black;
+                @include make-link($color-black);
+            }
+        }
+    }
+
+    &__search {
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 24px;
+            height: 24px;
+
+            .icon {
+                position: absolute;
+            }
+
+            .icon-close {
+                opacity: 0;
+                visibility: hidden;
+
             }
         }
     }

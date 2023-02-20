@@ -2,6 +2,10 @@
   // styles
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
+
+  @media (min-width: 992px) {
+    font-size: 72px;
+  }
 }
 
 @mixin h2() {

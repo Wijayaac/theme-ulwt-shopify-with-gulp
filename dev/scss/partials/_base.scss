@@ -8,7 +8,22 @@ body {
   min-height: 100%;
 }
 
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 ul,
 nav {
   @include list-unstyled();
+  margin-bottom: 0;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  position: absolute;
 }
