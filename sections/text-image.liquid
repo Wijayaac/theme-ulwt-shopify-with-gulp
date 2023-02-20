@@ -1,3 +1,8 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .text-image__wrapper::before {
+    opacity: {{ section.settings.image_overlay | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
 <div class="text-image__wrapper text-image__wrapper--{{ section.settings.image_height }}">
   <div class="text-image__background">
     {% if section.settings.image %}
@@ -86,6 +91,16 @@
       "info": "Height of the section"
     },
     {
+      "type": "range",
+      "id": "image_overlay",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Image Overlay Opaxity",
+      "default": 40
+    },
+    {
       "type": "textarea",
       "id": "description",
       "label": "Section Description"
@@ -109,12 +124,7 @@
   ],
   "presets": [
     {
-      "name": "Text Image",
-      "settings": {
-        "heading": "Your heading here",
-        "description": "Add your long text here",
-        "scroll_label": "Explore Product"
-      }
+      "name": "Text Image"
     }
   ]
 }

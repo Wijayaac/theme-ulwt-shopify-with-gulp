@@ -1,7 +1,7 @@
 {
   "name": "home-page",
   "sections": {
-    "text-image": {
+    "text_image": {
       "type": "text-image",
       "settings": {
         "heading": "lorem ipsum dolor sit amet",
@@ -9,7 +9,35 @@
         "enable_scroll_instruction": true,
         "image_height": "full"
       }
+    },
+    "text_image_2": {
+      "type": "text-image",
+      "settings": {
+        "image_height": "medium",
+        "image_overlay": 0
+      }
+    },
+    "product_collection": {
+      "type": "product-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "selected-collection",
+        "description": "Lorem ipsum dolor sit amet",
+        "show_description": true,
+        "image_ratio": "adapt",
+        "products_to_show": 7,
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_view_all": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false
+      }
     }
   },
-  "order": [ "text-image" ]
+  "order": [ "text_image", "text_image_2", "product_collection" ]
 }
