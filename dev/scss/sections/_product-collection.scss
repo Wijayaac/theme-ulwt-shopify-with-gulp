@@ -1,0 +1,13 @@
+.product-collection {
+    &__title {
+        margin-bottom: 48px;
+
+        h2 {
+            text-transform: uppercase;
+
+            &::first-letter {
+                color: $color-orange;
+            }
+        }
+    }
+}

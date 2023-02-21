@@ -1,14 +1,17 @@
 .rating-wrapper {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 0;
-    background-color: $color-black;
-    color: var(--gradient-base-background-1);
-    padding-right: 5px;
+    background-color: $color-dark-brown;
+    color: $color-white;
+    z-index: 2;
+    padding: 8px;
 }
 
 .rating {
     display: inline-block;
-    margin: 0;
+    margin-right: 4px;
 }
 
 .product .rating-star {
@@ -24,7 +27,7 @@
 .rating-star {
     --percent: calc((var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) / (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))) * 100%);
     letter-spacing: 0;
-    font-size: calc(var(--font-size) * 1rem);
+    font-size: 24px;
     line-height: 1;
     display: inline-block;
     font-family: Times;
@@ -33,9 +36,7 @@
 
 .rating-star::before {
     content: '★';
-    background: linear-gradient(90deg,
-            $color-black var(--percent),
-            rgba($color-white, 0.15) var(--percent));
+    background-color: $color-white;
     // background: linear-gradient(90deg,
     //         var(--gradient-base-background-1) var(--percent),
     //         rgba(var(--color-foreground), 0.15) var(--percent));

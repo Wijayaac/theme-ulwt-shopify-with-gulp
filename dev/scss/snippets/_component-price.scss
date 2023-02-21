@@ -1,8 +1,10 @@
 .price {
     font-size: 1.6rem;
-    letter-spacing: 0.1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
     line-height: calc(1 + 0.5 / var(--font-body-scale));
-    // color: rgb(var(--color-foreground));
+    font-family: 'Mulish', sans-serif;
+    color: $color-black;
 }
 
 .price>* {
@@ -82,7 +84,7 @@
 .price--on-sale .price-item--regular {
     text-decoration: line-through;
     // color: rgba(var(--color-foreground), 0.75);
-    font-size: 1.3rem;
+    color: #36363666;
 }
 
 .price--on-sale .price-item--sale,
